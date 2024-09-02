@@ -1,4 +1,4 @@
-/* import bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt';
 import { db } from '@vercel/postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
@@ -102,6 +102,10 @@ async function seedRevenue() {
 }
 
 export async function GET() {
+ /*  return Response.json({
+    message:
+      'Uncomment this file and remove this line. You can delete this file when you are finished.',
+  }); */
   try {
     console.log(client);
     await client.sql`BEGIN`;
@@ -117,4 +121,3 @@ export async function GET() {
     return Response.json({ error }, { status: 500 });
   }
 }
- */
